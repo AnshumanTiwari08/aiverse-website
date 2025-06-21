@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deep Learning | Aiverse</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="scroll-animate">
+    <h1>🌌 Aiverse</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="../index.html">Topics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero scroll-animate">
+    <h2>🧠 Deep Learning</h2>
+    <img src="../images/dl.jpg" alt="Deep Learning" class="topic-image">
+    <p>Deep Learning is a subfield of Machine Learning that uses artificial neural networks with many layers. It powers image recognition, voice assistants, and self-driving technology by mimicking how the human brain processes data.</p>
+    <div class="back-button">
+      <button onclick="location.href='home.html'">⬅ Back to Home</button>
+    </div>
+  </main>
+
+  <script>
+    const animElements = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    animElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

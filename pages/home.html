@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home | Aiverse</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="scroll-animate">
+    <h1 class="typewriter">Welcome to Aiverse</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Topics</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="hero scroll-animate">
+    <h2>Your guide through the universe of Artificial Intelligence</h2>
+    <img src="../images/home.jpg" alt="Home" class="topic-image">
+    <p>This site will take you through the world of AI, from Machine Learning and Deep Learning to careers and future scope.</p>
+    <button onclick="location.href='../index.html'">Explore Topics</button>
+  </main>
+
+  <script>
+    const animElements = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    animElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

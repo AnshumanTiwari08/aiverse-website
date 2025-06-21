@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>What is AI? | Aiverse</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="scroll-animate">
+    <h1>🌌 Aiverse</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="../index.html">Topics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero scroll-animate">
+    <h2>🤖 What is AI?</h2>
+    <img src="../images/what-is-ai.jpg" alt="What is AI" class="topic-image">
+    <p>AI is the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions.</p>
+    <div class="back-button">
+      <button onclick="location.href='home.html'">⬅ Back to Home</button>
+    </div>
+  </main>
+
+  <script>
+    const animElements = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    animElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

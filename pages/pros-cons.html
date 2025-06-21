@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pros & Cons | Aiverse</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="scroll-animate">
+    <h1>🌌 Aiverse</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="../index.html">Topics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero scroll-animate">
+    <h2>⚖️ Pros & Cons of AI</h2>
+    <img src="../images/pros-cons.jpg" alt="Pros & Cons of AI" class="topic-image">
+    <p><strong>Pros:</strong> AI increases efficiency, automates repetitive tasks, enables innovation in medicine, finance, and more.<br><strong>Cons:</strong> Potential job losses, data privacy concerns, and ethical challenges like bias and control.</p>
+    <div class="back-button">
+      <button onclick="location.href='home.html'">⬅ Back to Home</button>
+    </div>
+  </main>
+
+  <script>
+    const animElements = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    animElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

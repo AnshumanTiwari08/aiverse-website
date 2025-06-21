@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aiverse – Topics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="scroll-animate">
+    <h1>🌌 Aiverse</h1>
+    <nav>
+      <ul>
+        <li><a href="pages/home.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero scroll-animate">
+    <h2>Explore the Universe of Artificial Intelligence</h2>
+    <p>Click on any topic below to learn more!</p>
+  </section>
+
+  <section class="cards scroll-animate">
+    <div class="card" onclick="location.href='pages/what-is-ai.html'">
+      <h3>🤖 What is AI?</h3>
+      <p>Understand the basics of Artificial Intelligence.</p>
+    </div>
+    <div class="card" onclick="location.href='pages/ml.html'">
+      <h3>📊 Machine Learning</h3>
+      <p>Learn how machines can learn from data.</p>
+    </div>
+    <div class="card" onclick="location.href='pages/dl.html'">
+      <h3>🧠 Deep Learning</h3>
+      <p>Explore the power of neural networks.</p>
+    </div>
+    <div class="card" onclick="location.href='pages/jobs.html'">
+      <h3>👨‍💻 Careers in AI</h3>
+      <p>Find out what jobs AI is creating.</p>
+    </div>
+    <div class="card" onclick="location.href='pages/pros-cons.html'">
+      <h3>⚖️ Pros & Cons</h3>
+      <p>Weigh the good and the bad of AI.</p>
+    </div>
+    <div class="card" onclick="location.href='pages/future.html'">
+      <h3>🚀 Future of AI</h3>
+      <p>Where is this technology headed?</p>
+    </div>
+  </section>
+
+  <footer class="scroll-animate">
+    <p>&copy; 2025 Aiverse | Created by Anshuman</p>
+  </footer>
+
+  <script>
+    const animElements = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    animElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
